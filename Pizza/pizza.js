@@ -1,22 +1,26 @@
 window.addEventListener("load", initialize);
+var ingredients;
+var choice;
 
 function initialize() {
     document.getElementById("add").addEventListener("click", add);
     document.getElementById("remove").addEventListener("click", remove);
+    ingredients = document.getElementById("ingredients");
+    choice = document.getElementById("choice");
 }
 
 function add() {
-    var ingredients = document.getElementById("ingredients");
-    
+
     if (ingredients.selectedIndex > -1 ) {
-        //todo: ausgewählte Zutat von der linken in die rechte Listbox verschieben 
+        var selectedOption = ingredients.options[ingredients.selectedIndex];
+        choice.appendChild(selectedOption);
     }
 }
 
 function remove() {
-    var choice = document.getElementById("choice");
-    
+   
     if (choice.selectedIndex > -1 ) {
-        //todo: ausgewählte Zutat von der rechten in die linke Listbox verschieben
+        var selectedOption = choice.options[choice.selectedIndex];
+        ingredients.appendChild(selectedOption);
     }
 }
