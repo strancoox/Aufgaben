@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets bestellen</title>
+    <link href="Tickets.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Tickets bestellen</h1>
+    
+    <form id="ticket-form" action="https://formlog.offline.ch/log" method="post" name="Ticketsbestellung">
+        <div>
+            <label for="email">Deine E-Mail Adresse:</label>
+            <input type="text" id="email" name="Email">
+            <br>
+            <label for="anzahlTickets">Anzahl Tickets:</label>
+            <select id="auswahl" name="auswahl">
+                <option value="0">Bitte wählen</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            <br>
+            <button type="submit" id="btn">Bestellen</button>
+        </div>
+    </form>
+
+    <script src="Tickets.js"></script>
+</body>
+</html>
